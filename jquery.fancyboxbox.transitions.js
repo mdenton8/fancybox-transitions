@@ -41,6 +41,34 @@
             complete: F._afterZoomOut
         });
     };
+	// Next gallery item - fly from left side to the center
+    F.transitions.slideIn = function() {
+        var endPos = F._getPosition(true);
+
+        endPos.left = (parseInt(endPos.left, 10) - 200) + 'px';
+        endPos.opacity = 0;
+        
+        F.wrap.css(endPos).show().animate({
+            left: '+=200px',
+            opacity: 1
+        }, {
+            duration: F.current.nextSpeed,
+            complete: F._afterZoomIn
+        });
+    };
+    
+    // Current gallery item - fly from center to the right
+    F.transitions.slideOut = function() {
+        F.wrap.removeClass('fancybox-opened').animate({
+            left: '+=200px',
+            opacity: 0
+        }, {
+            duration: F.current.prevSpeed,
+            complete: function () {
+                $(this).trigger('onReset').remove();
+            }
+        });
+    };
     F.transitions.curtainIn = function() {
 	var endHeight = F.wrap.height();
         /*
