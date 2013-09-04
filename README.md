@@ -1,9 +1,9 @@
 fancybox-transitions
 ====================
 
-Adds new transitions to the jQuery plugin fancybox.
+Adds new transitions to the jQuery plugin fancybox. Choose which ones you want and minimize with UglifyJS.
 
-So far adds the dropIn, dropOut, curtainIn, and curtainOut open and close methods, used like:
+So far adds the dropIn, dropOut, slideIn, slideOut, curtainIn, and curtainOut open and close methods, used like:
 
 ```javascript
 $('.fancybox').fancybox({
@@ -13,6 +13,8 @@ $('.fancybox').fancybox({
     closeSpeed:400
 });
 ```
+
+The first four transitions are by the fancybox plugin's author at http://jsfiddle.net/xZBBS/.
 
 TODO:
 - add new open and close transitions
