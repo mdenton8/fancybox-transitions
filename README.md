@@ -12,6 +12,6 @@ $('.fancybox').fancybox({
     closeSpeed:400
 });
 
--[] add new open and close transitions
--[] add other transitions
--[] add CSS3 support
+-[ ] add new open and close transitions
+-[ ] add other transitions
+-[ ] add CSS3 support
