@@ -41,6 +41,22 @@
             complete: F._afterZoomOut
         });
     };
+
+    F.transitions.dropInBottom = function() {
+        var endPos = F._getPosition(true);
+        var bottomPos = $(window).height();
+        var animHeight = bottomPos - parseInt(endPos.top, 10);
+
+        endPos.top = bottomPos + 'px';
+
+        F.wrap.css(endPos).show().animate({
+            top: '-=' + animHeight + 'px'
+        }, {
+            duration: F.current.openSpeed,
+            complete: F._afterZoomIn
+        });
+    };
+    
 	// Next gallery item - fly from left side to the center
     F.transitions.slideIn = function() {
         var endPos = F._getPosition(true);
